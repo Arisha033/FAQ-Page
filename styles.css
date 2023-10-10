@@ -5,50 +5,65 @@
     box-sizing: border-box;
 }
 
-.questions{
-    display: flex;
-    text-align: center;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.accordian{
+    margin: 0 auto;
+    width: 600px;
 
 }
 
 .title{
-    margin: 5rem;
+    margin: 4rem 8rem;
     letter-spacing: 2px;
     font-family: cursive;
     font-size: 1.3rem;
     color: rgb(160, 137, 5);
 
 }
-.section-center{
-    display: flex;
+
+.accordian-item{
     border-radius: 4px;
-    text-align: center;
-    justify-content: space-between;
-    letter-spacing: 4px;
+    border: 1px solid #ccc;
     background-color: #fff;
-    width: 600px;
     padding: 1.5rem;
     margin: 1rem;
 }
 
-.question{
+.accordian-header{
+    cursor: pointer;
+    position: relative;
     text-align: center;
-    display: flex;
-    gap: 2rem;
 }
 
-.plus-sign, .minus-sign{
-    color: rgb(160, 137, 5);
-    border: 2px solid rgb(160, 137, 5);
+.accordian-header p{
+    letter-spacing: 2px;
+    background-color: #fff;
 }
 
-.minus-sign{
+.accordian-toggle{
+    position: absolute;
+    right: 10px;
+    font-weight: bold;
+    border: none;
+    color: rgb(160, 137, 5) ;
+    font-size: 20px;
+    background: none;
+    cursor: pointer;
+}
+
+.accordian-content{
     display: none;
+    padding: 10px;
 }
 
-.text{
-    display: none;
+.accordian-header.active{
+    background-color: #ddd;
+}
+
+.accordian-content.active {
+    display: block;
+    background-color: #fff;
+}
+
+.accordian-content.active p {
+    background-color: #fff;
 }
